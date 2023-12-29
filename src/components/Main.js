@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../images/logo.png';
 import { BsFillSunriseFill, BsFillSunsetFill } from 'react-icons/bs';
 import { FaCloudMoon } from 'react-icons/fa6';
 import { IoMdMoon } from 'react-icons/io';
@@ -21,15 +20,11 @@ let hours = time.toLocaleString('en-US', {
   hour12: true,
 });
 let day = week[time.getDay()];
-let hour = time.getHours() % 12 || 12;
-
-console.log(hour);
-console.log(day);
 function Main({ mode }) {
   const [data, setData] = useState([]);
   useEffect(() => {
     try {
-      let response = fetch(
+      fetch(
         'https://api.geoapify.com/v1/ipinfo?apiKey=02f21a2ba7274957915b2324663c68d9'
       )
         .then((res) => res.json())
@@ -41,8 +36,6 @@ function Main({ mode }) {
           setData(data_1);
           let image = data_1.current.condition.icon;
           imageNum = image.slice(image.lastIndexOf('/') + 1, image.length);
-          console.log(imageNum);
-          console.log(data_1);
         });
     } catch (e) {
       console.log(e);

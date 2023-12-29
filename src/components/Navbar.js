@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import logo from '../images/logo.png';
 import { TbBrandGithubFilled } from 'react-icons/tb';
 import { RiInstagramFill } from 'react-icons/ri';
@@ -18,12 +18,12 @@ function Navbar({mode,setMode}) {
       </div>
       <div className='links flex items-center '>
         <a
-          href='www.github.io'
+          href='https://github.com/vishaldewani206'
           className={`${mode ? 'text-black': 'text-white' } p-2 md:p-3 rounded-full hover:bg-blue-600 bg-secondary`}>
           <TbBrandGithubFilled className='text-xl md:text-3xl' />
         </a>
         <a
-          href='www.instagram.com'
+          href='https://www.instagram.com/vcodes8'
           className={`${mode ? 'text-black': 'text-white' } bg-secondary p-2 md:p-3 rounded-full mx-3 hover:bg-blue-600`}>
           <RiInstagramFill className='text-xl md:text-3xl' />
         </a>

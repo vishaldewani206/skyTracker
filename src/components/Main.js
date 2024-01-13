@@ -28,14 +28,14 @@ function Main({ mode }) {
   const [data, setData] = useState([]);
   const [loader, setLoader] = useState(true);
   useEffect(() => {
-    const check = localStorage.getItem('data');
-    if (check) {
-      setLoader(true);
-      setData(JSON.parse(check));
-      let image = JSON.parse(check).current.condition.icon;
-      imageNum = image.slice(image.lastIndexOf('/') + 1, image.length);
-      setLoader(false);
-    } else {
+    // const check = localStorage.getItem('data');
+    // if (check) {
+      // setLoader(true);
+      // setData(JSON.parse(check));
+      // let image = JSON.parse(check).current.condition.icon;
+      // imageNum = image.slice(image.lastIndexOf('/') + 1, image.length);
+      // setLoader(false);
+    // } else {
       try {
         fetch(
           `https://api.geoapify.com/v1/ipinfo?apiKey=${process.env.REACT_APP_API_KEY_2}`
@@ -49,14 +49,14 @@ function Main({ mode }) {
             const data_1 = await res.json();
             setLoader(false);
             setData(data_1);
-            localStorage.setItem('data', JSON.stringify(data_1));
+            // localStorage.setItem('data', JSON.stringify(data_1));
             let image = data_1.current.condition.icon;
             imageNum = image.slice(image.lastIndexOf('/') + 1, image.length);
           });
       } catch (e) {
         console.log(e);
       }
-    }
+    
   }, []);
 
   return (

@@ -66,9 +66,9 @@ function Navbar({ mode, setMode }) {
               animate={{y: 0,  opacity: 1,  }}
         >
           {mode ? (
-            <MdDarkMode className='md:text-3xl text-xl w-[1.5rem] h-[1.5rem]' />
+            <MdDarkMode className='md:text-3xl text-xl w-[1.5rem] h-[1.5rem] md:w-[2rem] md:h-[2rem]' />
           ) : (
-            <MdLightMode className='text-3xl w-[1.5rem] h-[1.5rem]' />
+            <MdLightMode className='text-3xl w-[1.5rem] h-[1.5rem] md:w-[2rem] md:h-[2rem]' />
           )}
         </motion.button>
       </div>

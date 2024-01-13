@@ -36,7 +36,7 @@ function Navbar({ mode, setMode }) {
             mode ? 'text-black' : 'text-white'
           } p-1 md:p-3 rounded-full  border-2 border-blue-600 hover:bg-transparent bg-blue-600`}
            initial={{y: -50,  opacity: 0 }}
-              transition={{ duration: 0.7, delay: 0.7,  }}
+              transition={{ duration: 0.7, delay: 0.3,  }}
               animate={{y: 0,  opacity: 1,  }}
         >
           <TbBrandGithubFilled className='text-xl md:text-3xl' />
@@ -47,7 +47,7 @@ function Navbar({ mode, setMode }) {
             mode ? 'text-black' : 'text-white'
           }  p-1 md:p-3 rounded-full mx-3  border-2 border-blue-600 hover:bg-transparent bg-blue-600`}
           initial={{y: -50,  opacity: 0 }}
-              transition={{ duration: 0.7, delay: 1,  }}
+              transition={{ duration: 0.7, delay: 0.6,  }}
               animate={{y: 0,  opacity: 1,  }}
         >
           <RiInstagramFill className='text-xl md:text-3xl' />
@@ -62,7 +62,7 @@ function Navbar({ mode, setMode }) {
             setMode((pre) => !pre);
           }}
           initial={{y: -50,  opacity: 0 }}
-              transition={{ duration: 0.7, delay: 1.3,  }}
+              transition={{ duration: 0.7, delay: 0.9,  }}
               animate={{y: 0,  opacity: 1,  }}
         >
           {mode ? (

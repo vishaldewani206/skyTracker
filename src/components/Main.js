@@ -60,7 +60,7 @@ function Main({ mode }) {
   }, []);
 
   return (
-    <div className='flex  items-center flex-col  w-full my-4 mb-8'>
+    <div className='flex  items-center flex-col  w-full my-4 mb-8 min-h-[100vh]'>
       {loader ? (
         <Spinner />
       ) : (
@@ -69,12 +69,12 @@ function Main({ mode }) {
             mode ? 'bg-stone-200' : 'bg-stone-900'
           } w-full rounded md:px-10 md:py-8 px-3 py-4 shadow-lg `}
            initial={{ y: -100, opacity: 0,transformOrigin: 'top' }}
-          transition={{ duration: 0.7, delay: 1.7  }}
+          transition={{ duration: 0.7, delay: 1.1  }}
           animate={{ y: 0, opacity: 1,  }}
         >
           <motion.div
           initial={{y:-100,  opacity: 0 }}
-          transition={{ duration: 0.7, delay: 2,  }}
+          transition={{ duration: 0.7, delay: 1.4,  }}
           animate={{y: 0,  opacity: 1,  }}
            className='md:flex w-full mt-7'>
             <div className='md:w-1/2 flex justify-center md:justify-normal'>
@@ -121,7 +121,7 @@ function Main({ mode }) {
                 mode ? 'bg-secondary' : 'bg-sky-800'
               } flex flex-col  items-center rounded-lg`}
               initial={{y: -80,  opacity: 0 }}
-              transition={{ duration: 0.7, delay: 2.3,  }}
+              transition={{ duration: 0.7, delay: 1.7,  }}
               animate={{y: 0,  opacity: 1,  }}
           
             >
@@ -138,7 +138,7 @@ function Main({ mode }) {
                 mode ? 'bg-secondary' : 'bg-sky-800'
               }  flex flex-col  items-center rounded-lg`}
               initial={{y: -80,  opacity: 0 }}
-              transition={{ duration: 0.7, delay: 2.6,  }}
+              transition={{ duration: 0.7, delay: 2,  }}
               animate={{y: 0,  opacity: 1,  }}
             >
               <BsFillSunsetFill className='md:text-7xl text-5xl text-yellow-400' />
@@ -154,7 +154,7 @@ function Main({ mode }) {
                 mode ? 'bg-secondary' : 'bg-sky-800'
               } flex flex-col  items-center rounded-lg`}
                initial={{y: -80,  opacity: 0 }}
-              transition={{ duration: 0.7, delay: 2.9,  }}
+              transition={{ duration: 0.7, delay: 2.3,  }}
               animate={{y: 0,  opacity: 1,  }}
             >
               <FaCloudMoon className='md:text-7xl text-5xl text-white' />
@@ -170,7 +170,7 @@ function Main({ mode }) {
                 mode ? 'bg-secondary' : 'bg-sky-800'
               } md:p-4 p-1 md:px-8 bg-secondary flex flex-col  items-center rounded-lg`}
                initial={{y: -80,  opacity: 0 }}
-              transition={{ duration: 0.7, delay: 3.1,  }}
+              transition={{ duration: 0.7, delay: 2.6,  }}
               animate={{y: 0,  opacity: 1,  }}
             >
               <IoMdMoon className='md:text-7xl text-5xl text-white' />
